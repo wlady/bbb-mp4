@@ -51,6 +51,8 @@ async function main() {
         const pages = await browser.pages()
 
         page = pages[0]
+        const version = await page.browser().version()
+        console.log(version)
 
         page.on('console', msg => {
             var m = msg.text();
@@ -88,7 +90,7 @@ async function main() {
         console.log(duration)
 
         await page.waitForSelector('button[class=vjs-big-play-button]');
-        await page.$eval('.bottom-content', element => element.style.display = "none");
+        // await page.$eval('.bottom-content', element => element.style.display = "none");
         await page.$eval('.fullscreen-button', element => element.style.opacity = "0");
         await page.$eval('.right', element => element.style.opacity = "0");
         await page.$eval('.vjs-control-bar', element => element.style.opacity = "0");
