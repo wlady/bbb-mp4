@@ -27,7 +27,7 @@ Hence, you can safely deploy this project on your existing BigBlueButton server.
 # Assuming you install bbb-mp4 project at /var/www/
 # SSH to your BigBlueButton server and execute the following commands
 cd /var/www
-git clone https://github.com/manishkatyan/bbb-mp4.git
+git clone https://github.com/wlady/bbb-mp4.git
 cd bbb-mp4
 ```
 Edit `.env` to update the following parameters:
