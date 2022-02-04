@@ -14,4 +14,4 @@ sudo docker run --rm -d \
                 --name $MEETING_ID \
                 -v $COPY_TO_LOCATION:/usr/src/app/download \
                 --env REC_URL=https://$BBB_DOMAIN_NAME/playback/presentation/2.3/$MEETING_ID \
-                manishkatyan/bbb-mp4
+                wlady2001/bbb-mp4
