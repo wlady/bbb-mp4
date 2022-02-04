@@ -13,8 +13,8 @@ var width = 1930;
 var height = 1090;
 var options = {
     headless: false,
+    ignoreDefaultArgs: ['--enable-automation'],
     args: [
-        '--disable-infobars',
         '--no-sandbox',
         '--disable-dev-shm-usage',
         '--start-fullscreen',
