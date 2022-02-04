@@ -13,8 +13,9 @@ var width = 1940;
 var height = 1100;
 var options = {
     headless: false,
-    ignoreDefaultArgs: ['--enable-automation'],
     args: [
+        '--disable-infobars',
+        '--no-sandbox',
         '--disable-dev-shm-usage',
         '--start-fullscreen',
         '--app=https://www.google.com/',
