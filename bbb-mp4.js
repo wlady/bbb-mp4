@@ -19,7 +19,7 @@ var options = {
         '--disable-dev-shm-usage',
         '--start-fullscreen',
         '--app=https://www.google.com/',
-        `--window-size=${width},${height}`,
+        `--window-size=1920,1080`,
     ],
 }
 options.executablePath = "/usr/bin/google-chrome"
