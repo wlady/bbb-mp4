@@ -2,24 +2,21 @@ const puppeteer = require('puppeteer');
 const child_process = require('child_process');
 const Xvfb = require('xvfb');
 
-// Generate randome display port number to avoide xvfb failure
+// Generate random display port number to avoide xvfb failure
 var disp_num = Math.floor(Math.random() * (200 - 99) + 99);
 var xvfb = new Xvfb({
     displayNum: disp_num,
     silent: true,
-    xvfb_args: ["-screen", "0", "1930x1090x24", "-ac", "-nolisten", "tcp", "-dpi", "96", "+extension", "RANDR"]
+    xvfb_args: ["-screen", "0", "1940x1160x24", "-ac", "-nolisten", "tcp", "-dpi", "96", "+extension", "RANDR"]
 });
-var width = 1930;
-var height = 1090;
 var options = {
     headless: false,
     args: [
-        '--disable-infobars',
         '--no-sandbox',
         '--disable-dev-shm-usage',
-        '--start-fullscreen',
-        '--app=https://www.google.com/',
-        `--window-size=1920,1080`,
+        // '--start-fullscreen',
+        '--app=http://www.google.com',
+        `--window-size=1920,1140`,
     ],
 }
 options.executablePath = "/usr/bin/google-chrome"
@@ -98,7 +95,7 @@ async function main() {
         const ls = child_process.spawn('sh', ['ffmpeg-cmd.sh', ' ',
             `${duration}`, ' ',
             `${exportname}`, ' ',
-            `${disp_num}.0+7,7`
+            `${disp_num}.0+10,60`
         ], {
             shell: true
         });
